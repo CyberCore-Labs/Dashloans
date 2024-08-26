@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav>
+      <ul class="sidebar">
+        <li onclick="hideSidebar()">
+          <a href="#"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#fff"
+            >
+              <path
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+              /></svg
+          ></a>
+        </li>
+        <li><a href="#apply-now">Apply Now</a></li>
+        <li><a href="#about-us">About Us</a></li>
+        <li><a href="#contact-us">Contact</a></li>
+      </ul>
+      <ul>
+        <img src="/assets/logo_bgr.png" alt="logo" class="logo" />
+        <li class="hideOnMobile"><a href="#apply-now">Apply Now</a></li>
+        <li class="hideOnMobile"><a href="#about-us">About Us</a></li>
+        <li class="hideOnMobile"><a href="#contact-us">Contact</a></li>
+        <li class="menu-button" onclick="showSidebar()">
+          <a href="#"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#fff"
+            >
+              <path
+                d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+              /></svg
+          ></a>
+        </li>
+      </ul>
+    </nav>
+    <div class="hero-bg">
+      <section class="hero">
+        <div class="content">
+          <h1>Fast & Secure Loans</h1>
+          <p>
+            <span class="line-break"></span>
+            At Dashloans we offer microloans of <br class="break-point" />
+            up to R8000 for up to 3 months
+          </p>
+          <a href="#" class="btn">Get Started</a>
+        </div>
+        <div class="hero-image">
+          <img src="/assets/hero-new-bgr.png" alt="" />
+        </div>
+      </section>
+    </div>
+    <section id="apply-now" class="calculator-slider">
+      <h1 class="section-heading">Loan Calculator</h1>
+      <div class="container">
+        <div class="info-section">
+          <h2>What you'll need:</h2>
+          <ul>
+            <li>A Cellphone Number</li>
+            <li>SA ID Number</li>
+            <li>Bank account details</li>
+            <li>Most recent proof of income</li>
+          </ul>
+          <h2>How to apply:</h2>
+          <ol>
+            <li>Choose the amount you need</li>
+            <li>Choose how long you will need to repay</li>
+            <li>
+              Click "Apply Now" and proceed to finalize your loan application
+            </li>
+          </ol>
+          <hr />
+          <div class="tm-ccl">
+            <p>
+              powered by
+              <a href="https://cybercorelabs.co.za" target="_blank" class="CCL"
+                >Cybercore Labs</a
+              >
+            </p>
+          </div>
+        </div>
+        <div class="calculator-section">
+          <div>
+            <label for="loanAmount">Loan Amount</label>
+            <div class="slider">
+              <input
+                type="range"
+                id="loanAmount"
+                min="1000"
+                max="8000"
+                step="100"
+                value="100"
+                style="width: 100%"
+              />
+              <div class="bubble" id="amountBubble">R 100</div>
+            </div>
+            <div class="step-labels">
+              <span>R 1000</span>
+              <span>R 8000</span>
+            </div>
+          </div>
+          <div>
+            <label for="loanPeriod">Loan Period</label>
+            <div class="slider">
+              <input
+                type="range"
+                id="loanPeriod"
+                min="1"
+                max="3"
+                step="1"
+                value="1"
+                style="width: 100%"
+              />
+              <div class="bubble" id="periodBubble">1 Month</div>
+            </div>
+            <div class="step-labels">
+              <span>1 Month</span>
+              <span>3 Months</span>
+            </div>
+          </div>
+          <div class="results">
+            <p>
+              <strong>Monthly Payment:</strong> R
+              <span id="monthlyPayment">0</span>
+            </p>
+            <p>
+              <strong>Total Interest & Fees:</strong> R
+              <span id="totalInterest">0</span>
+            </p>
+            <p>
+              <strong>Initiation Fee:</strong> R
+              <span id="initiationFee">0</span>
+            </p>
+            <p>
+              <strong>Admin Fee:</strong> R
+              <span id="adminFee">0</span>
+            </p>
+            <p>
+              <strong>Total Repayment Amount:</strong> R
+              <span id="totalRepayment">0</span>
+            </p>
+            <br />
+            <div class="disclaimer">
+              <p>*These values are only for estimate purposes</p>
+            </div>
+          </div>
+          <button class="apply-button">Apply Now</button>
+        </div>
+      </div>
+    </section>
+    <div id="about-us" class="about">
+      <h1 class="section-heading">About Us</h1>
+      <div class="inner-section">
+        <p class="text">
+          Welcome to <strong>Dashloans</strong>! We specialize in providing
+          fast, flexible microloans of up to R8000 with terms of up to 3 months.
+          Our mission is to offer straightforward financial support to help you
+          navigate life's unexpected challenges with ease.
+        </p>
+        <p class="text">
+          <strong>Why Choose Us?</strong><br />
+          - Quick and Easy Application: Apply online and receive funds
+          swiftly.<br />
+          - Flexible Terms: Manage your budget with repayment plans tailored to
+          you.<br />
+          - Transparent Fees: No hidden costs—just clear, straightforward
+          information.<br />
+          - Exceptional Service: Our team is here to assist you every step of
+          the way.
+        </p>
+        <p class="text">
+          <strong>Our Values:</strong><br />
+          - Integrity: We prioritize honesty and transparency.<br />
+          - Empathy: We offer solutions that genuinely address your needs.<br />
+          - Innovation: We leverage technology to enhance your experience.
+        </p>
+        <div class="skills">
+          <button>Learn More</button>
+        </div>
+      </div>
+    </div>
+    <div id="contact-us" class="contact-us">
+      <h1 class="section-heading contact-heading">Contact Us</h1>
+      <div class="contact-form-container">
+        <div class="form-wrapper">
+          <div class="form-header">
+            <p>Feel free to reach out to us for any inquiries or support.</p>
+          </div>
+          <form>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your Name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Your Message"
+                required
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <button type="submit">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-col">
+        <ul>
+          <img id="ncr-logo" src="/assets/ncr.png" alt="ncr logo" />
+          <li><p style="color: #dfdfdf; font-size: 35px">NCRCP88845</p></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>services</h4>
+        <ul>
+          <li><a href="#">microloans</a></li>
+          <li><a href="#">business loans</a></li>
+          <li><a href="#">insurance</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>company</h4>
+        <ul>
+          <li><a href="#about-us">about</a></li>
+          <li><a href="#contact-us">contact us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>follow us</h4>
+        <div class="links">
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </footer>
+    <div class="powered-by">
+      Powered by
+      <a href="https://cybercorelabs.co.za" target="_blank">Cybercore Labs</a>
+    </div>
+    <script src="/js/script.js"></script>
+  </body>
+</html>
